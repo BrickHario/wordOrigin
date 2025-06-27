@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>word origins</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #controls {
+        background: #ffffffcc;
+        padding: 0.75em 1em;
+        font-size: 1.25em;
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+      }
+      #controls label {
+        font-weight: bold;
+      }
+      #controls select {
+        font-size: 1em;
+        padding: 0.25em;
+      }
+
+      #map {
+        width: 100%;
+        height: calc(100% - 3.5em);
+      }
+
+      .leaflet-control .legend {
+        background: #ffffffee;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        font-size: 1.1em;
+        padding: 0.75em 1em;
+        width: calc(100% - 2em);
+        left: 1em !important;
+        bottom: 1em !important;
+        right: 1em !important;
+        border-radius: 0.5em;
+      }
+      .legend .legend-color {
+        display: inline-block;
+        width: 1.2em;
+        height: 1.2em;
+        margin-right: 0.5em;
+        vertical-align: middle;
+        border-radius: 0.2em;
+        border: 1px solid #888;
+      }
+      .legend hr {
+        border: none;
+        border-top: 1px solid #ccc;
+        margin: 0.5em 0;
+      }
+      .legend strong {
+        font-size: 1.05em;
+      }
+      .legend em {
+        font-style: italic;
+      }
+      .leaflet-bottom {
+        background-color: white;
+        padding: 12px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div id="controls">
+      <h1>Word Origins Europe</h1>
+      <label for="wordSelect">word:</label>
+      <select id="wordSelect">
+        <option value="cloud">cloud</option>
+        <option value="cloud">...</option>
+      </select>
+    </div>
+    <div id="map"></div>
+<script src="js/leaflet-src.js"></script>
+<script type="module" src="js/main.js"></script>
+
+  </body>
+</html>
